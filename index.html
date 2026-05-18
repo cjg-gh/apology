@@ -8,10 +8,21 @@
 </head>
 <body>
     <div class="container">
-        <div class="card" id="letterCard">
-            <h1>I'm Sorry 🥺</h1>
-            <p>I value our relationship more than anything. I am truly sorry for what happened and want to make things right.</p>
-            <p>Can we talk?</p>
+        <!-- Flashcard Wrapper -->
+        <div class="flashcard-container">
+            <button class="nav-btn" id="prevBtn" onclick="prevCard()">&lt;</button>
+            
+            <div class="card" id="flashcard">
+                <p id="cardText">Loading message...</p>
+                <span id="cardNumber" class="card-number">1/5</span>
+            </div>
+            
+            <button class="nav-btn" id="nextBtn" onclick="nextCard()">&gt;</button>
+        </div>
+
+        <!-- Final Response Buttons (Hidden until the last card) -->
+        <div class="action-container id-hidden" id="actionArea">
+            <h3>Can we talk?</h3>
             <div class="buttons">
                 <button class="btn yes-btn" onclick="acceptApology()">Yes, let's talk</button>
                 <button class="btn no-btn" id="noBtn">No</button>
